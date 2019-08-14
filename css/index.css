@@ -141,14 +141,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
+  width: 100vw;
   margin: 0 auto;
 }
 .container navbar {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: pink;
   padding: 2rem;
   margin-bottom: 2rem;
 }
@@ -187,6 +186,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: #e3e3e3;
 }
 .container .main-content-head .jumbo-image img {
   width: 33vw;
@@ -201,4 +201,30 @@ body {
   .container .main-content-head .jumbo-image img {
     width: 90vw;
   }
+}
+.container .main-content-head .main-content-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main-content-head .main-content-row h1 {
+  font-size: 6rem;
+  margin: 2rem;
+}
+.container .main-content-head .main-content-row h3 {
+  font-size: 3rem;
+  border-bottom: 0.1rem solid black;
+}
+.container .main-content-head .main-content-row button {
+  margin: 2rem;
+  width: 33vw;
+  height: 5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #91b2bd;
+  color: white;
+}
+.container .main-content-head .main-content-row button:hover {
+  background-color: #849499;
+  cursor: pointer;
 }

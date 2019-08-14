@@ -67,6 +67,12 @@ html, body {
 @tabletNavFontSize : 2.5rem;
 @mobileNavFontSize : 2rem;
 
+@desktopJumboFontSize : 6rem;
+
+@desktopH3FontSize : 3rem;
+
+@desktopButtonFontSize: 2rem;
+
 //breakpoints
 @tabletBreakpoint: 800px;
 @mobileBreakpoint: 500px;
@@ -74,7 +80,6 @@ html, body {
 //color variables
 @navLinkFontColor : darkgrey;
 
-//image size variables according to breakpoints
 
 //mixins
 .flexColumn() {
@@ -83,16 +88,21 @@ html, body {
 	align-items: center;
 }
 
+.borderBottom() {
+	border-bottom: 0.1rem solid black;
+}
+
 .container {
 	.flexColumn();
-	width: 50vw;
+	width: 100vw;
 	margin: 0 auto;
+
+	// background-color: lightgrey;
 
 	navbar {
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
-		background-color: pink;
 		padding: 2rem;
 		margin-bottom: 2rem;
 
@@ -125,6 +135,7 @@ html, body {
 	.main-content-head {
 		.flexColumn();
 		width: 100%;
+		background-color: rgba(227, 227, 227, 1);
 
 			.jumbo-image img {
 				width: 33vw;
@@ -137,7 +148,33 @@ html, body {
 					width: 90vw;
 				}
 			}
-		
+			.main-content-row {
+				.flexColumn();
+
+				h1 {
+					font-size: @desktopJumboFontSize;
+					margin: 2rem;
+				}
+				h3 {
+					font-size: @desktopH3FontSize;
+					.borderBottom();
+				}
+				
+				button {
+					margin: 2rem;
+					width: 33vw;
+					height: 5rem;
+					font-size: @desktopButtonFontSize;
+					border: none;
+					background-color: rgb(145,178,189);
+					color:white;
+
+					&:hover {
+						background-color: rgb(132,148,153);						;
+						cursor: pointer;
+					}
+				}
+			}
 			
 	}
 }
