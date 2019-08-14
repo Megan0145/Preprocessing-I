@@ -83,7 +83,7 @@ html, body {
 //color variables
 @navLinkFontColor : darkgrey;
 @footerBGColor: rgb(145,178,189);
-@mainContentHover: rgb(203,232,241);
+@mainContentHover: rgb(202,221,228);
 @buttonBGColor: rgb(145,178,189);
 @bgHeadColor: rgba(227, 227, 227, 1);
 @buttonHoverColor: rgb(132,148,153);
@@ -102,7 +102,7 @@ html, body {
 
 .container {
 	.flexColumn();
-	width: 100vw;
+	width: 90vw;
 	margin: 0 auto;
 
 	p {
@@ -225,6 +225,15 @@ html, body {
 			font-size: @desktopStandardFontSize;
 			text-align: center;
 			margin: 2rem;
+
+			@media (max-width: @tabletBreakpoint) {
+				width: 90vw;
+				border: none;
+				background-color: @bgHeadColor;
+			}
+			@media (max-width: @mobileBreakpoint) {
+				border: none;
+			}
 			th {
 				font-weight: bold;
 				padding: 2rem;

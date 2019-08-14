@@ -142,7 +142,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
   margin: 0 auto;
 }
 .container p {
@@ -248,7 +248,7 @@ body {
   border: 0.1rem solid black;
 }
 .container .main-content-body article:hover {
-  background-color: #cbe8f1;
+  background-color: #cadde4;
 }
 .container .main-content-body article h3,
 .container .main-content-body article p {
@@ -277,6 +277,18 @@ body {
   text-align: center;
   margin: 2rem;
 }
+@media (max-width: 800px) {
+  .container .main-content-work-history table {
+    width: 90vw;
+    border: none;
+    background-color: #e3e3e3;
+  }
+}
+@media (max-width: 500px) {
+  .container .main-content-work-history table {
+    border: none;
+  }
+}
 .container .main-content-work-history table th {
   font-weight: bold;
   padding: 2rem;
@@ -285,7 +297,7 @@ body {
   padding: 2rem;
 }
 .container .main-content-work-history table:hover {
-  background-color: #cbe8f1;
+  background-color: #cadde4;
 }
 .container footer {
   display: flex;
