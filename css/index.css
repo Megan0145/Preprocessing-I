@@ -144,6 +144,16 @@ body {
   width: 100vw;
   margin: 0 auto;
 }
+.container p {
+  font-size: 2rem;
+}
+.container h1 {
+  font-size: 6rem;
+  margin: 2rem;
+}
+.container h3 {
+  font-size: 3rem;
+}
 .container navbar {
   display: flex;
   justify-content: space-around;
@@ -181,6 +191,17 @@ body {
     border-bottom: 0.01rem solid black;
   }
 }
+.container .main-content-row {
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 800px) {
+  .container .main-content-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .container .main-content-head {
   display: flex;
   flex-direction: column;
@@ -202,20 +223,10 @@ body {
     width: 90vw;
   }
 }
-.container .main-content-head .main-content-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container .main-content-head .main-content-row h1 {
-  font-size: 6rem;
-  margin: 2rem;
-}
-.container .main-content-head .main-content-row h3 {
-  font-size: 3rem;
+.container .main-content-head h3 {
   border-bottom: 0.1rem solid black;
 }
-.container .main-content-head .main-content-row button {
+.container .main-content-head button {
   margin: 2rem;
   width: 33vw;
   height: 5rem;
@@ -224,7 +235,51 @@ body {
   background-color: #91b2bd;
   color: white;
 }
-.container .main-content-head .main-content-row button:hover {
+.container .main-content-head button:hover {
   background-color: #849499;
   cursor: pointer;
+}
+.container .main-content-body {
+  margin: 2rem;
+}
+.container .main-content-body article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  margin: 2rem;
+  padding: 3rem;
+  border: 0.1rem solid black;
+}
+.container .main-content-body article:hover {
+  background-color: #cbe8f1;
+}
+.container .main-content-body article h3,
+.container .main-content-body article p {
+  padding: 1rem;
+}
+@media (max-width: 800px) {
+  .container .main-content-body article {
+    width: 66vw;
+  }
+}
+@media (max-width: 500px) {
+  .container .main-content-body article {
+    width: 100vw;
+    border: none;
+  }
+}
+.container footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #91b2bd;
+  width: 100vw;
+  padding: 2rem;
+}
+.container footer img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  margin: 1rem;
 }

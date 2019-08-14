@@ -73,12 +73,16 @@ html, body {
 
 @desktopButtonFontSize: 2rem;
 
+@desktopStandardFontSize: 2rem;
+
 //breakpoints
 @tabletBreakpoint: 800px;
 @mobileBreakpoint: 500px;
 
 //color variables
 @navLinkFontColor : darkgrey;
+@footerBGColor: rgb(145,178,189);
+@mainContentHover: rgb(203,232,241);
 
 
 //mixins
@@ -97,7 +101,16 @@ html, body {
 	width: 100vw;
 	margin: 0 auto;
 
-	// background-color: lightgrey;
+	p {
+		font-size: @desktopStandardFontSize;
+	}
+	h1 {
+		font-size: @desktopJumboFontSize;
+		margin: 2rem;
+	}
+	h3 {
+		font-size: @desktopH3FontSize;
+	}
 
 	navbar {
 		display: flex;
@@ -132,6 +145,14 @@ html, body {
 		}
 	}
 
+	.main-content-row {
+		display: flex;
+		justify-content: space-around;
+		@media(max-width: @tabletBreakpoint) {
+			.flexColumn();
+		}
+	}
+
 	.main-content-head {
 		.flexColumn();
 		width: 100%;
@@ -148,34 +169,66 @@ html, body {
 					width: 90vw;
 				}
 			}
-			.main-content-row {
-				.flexColumn();
-
-				h1 {
-					font-size: @desktopJumboFontSize;
-					margin: 2rem;
-				}
-				h3 {
-					font-size: @desktopH3FontSize;
-					.borderBottom();
-				}
-				
-				button {
-					margin: 2rem;
-					width: 33vw;
-					height: 5rem;
-					font-size: @desktopButtonFontSize;
-					border: none;
-					background-color: rgb(145,178,189);
-					color:white;
-
-					&:hover {
-						background-color: rgb(132,148,153);						;
-						cursor: pointer;
-					}
+			h3 {
+				.borderBottom();
+			}
+			button {
+				margin: 2rem;
+				width: 33vw;
+				height: 5rem;
+				font-size: @desktopButtonFontSize;
+				border: none;
+				background-color: rgb(145,178,189);
+				color:white;
+	
+				&:hover {
+					background-color: rgb(132,148,153);						;
+					cursor: pointer;
 				}
 			}
 			
+	}
+
+	.main-content-body {
+		margin: 2rem;
+			article {
+				.flexColumn();
+				width: 40vw;
+				margin: 2rem;
+				padding: 3rem;
+				border: 0.1rem solid black;
+
+					&:hover {
+						background-color: @mainContentHover;
+					}
+
+					h3, p {
+						padding: 1rem;
+					}
+
+					@media (max-width: @tabletBreakpoint) {
+						width: 66vw;
+					}
+					@media (max-width: @mobileBreakpoint) {
+						width: 100vw;
+						border: none;
+					}
+			}
+	}
+
+	footer {
+		.flexColumn();
+		background-color: @footerBGColor;
+		width: 100vw;
+		padding: 2rem;
+
+		img {
+			width: 5rem;
+			height:5rem;
+			border-radius: 5rem;
+			margin: 1rem;
+		}
+
 	}
 }
 
