@@ -216,11 +216,34 @@ html, body {
 			}
 	}
 
+	.main-content-work-history {
+		.flexColumn();
+		table {
+			width:66vw;
+			border: 0.1rem solid black;
+			font-size: @desktopStandardFontSize;
+			text-align: center;
+			margin: 2rem;
+			th {
+				font-weight: bold;
+				padding: 2rem;
+			}
+			td {
+				padding: 2rem;
+			}
+
+			&:hover {
+				background-color: @mainContentHover;
+			}
+		}
+	}
+
 	footer {
 		.flexColumn();
 		background-color: @footerBGColor;
 		width: 100vw;
 		padding: 2rem;
+		text-align:center;
 
 		img {
 			width: 5rem;
