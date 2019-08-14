@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  font-family: 'Blinker', sans-serif;
 }
 :root {
   font-size: 10px;
