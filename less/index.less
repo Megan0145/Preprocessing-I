@@ -83,6 +83,9 @@ html, body {
 @navLinkFontColor : darkgrey;
 @footerBGColor: rgb(145,178,189);
 @mainContentHover: rgb(203,232,241);
+@buttonBGColor: rgb(145,178,189);
+@bgHeadColor: rgba(227, 227, 227, 1);
+@buttonHoverColor: rgb(132,148,153);
 
 
 //mixins
@@ -115,13 +118,10 @@ html, body {
 	navbar {
 		display: flex;
 		justify-content: space-around;
-		width: 100%;
+		width: 100vw;
 		padding: 2rem;
 		margin-bottom: 2rem;
 
-		@media (max-width: @tabletBreakpoint) {
-			width: 100vw;
-		}
 		@media (max-width: @mobileBreakpoint) {
 			flex-direction: column;
 			align-items: center;
@@ -138,7 +138,7 @@ html, body {
 			@media (max-width: @mobileBreakpoint) {
 				font-size: @mobileNavFontSize;
 				text-align: center;
-				width: 100%;
+				width: 100vw;
 				padding: 1rem;
 				border-bottom: 0.01rem solid black;
 			}
@@ -155,8 +155,8 @@ html, body {
 
 	.main-content-head {
 		.flexColumn();
-		width: 100%;
-		background-color: rgba(227, 227, 227, 1);
+		width: 100vw;
+		background-color: @bgHeadColor;
 
 			.jumbo-image img {
 				width: 33vw;
@@ -178,11 +178,11 @@ html, body {
 				height: 5rem;
 				font-size: @desktopButtonFontSize;
 				border: none;
-				background-color: rgb(145,178,189);
+				background-color: @buttonBGColor;
 				color:white;
 	
 				&:hover {
-					background-color: rgb(132,148,153);						;
+					background-color: @buttonHoverColor;						;
 					cursor: pointer;
 				}
 			}
